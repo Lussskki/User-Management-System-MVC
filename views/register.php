@@ -7,7 +7,7 @@
 <body>
   <h2>Register New User</h2>
 
-  <form method="POST" action="/user-managment-system/public/register">
+  <form method="POST" action="/User-Management-System-MVC/public/register">
     <label>Name:</label><br>
     <input type="text" name="name" required><br><br>
 
