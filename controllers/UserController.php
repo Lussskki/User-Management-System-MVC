@@ -20,7 +20,7 @@ class UserController {
         try {
             $user->create($name, $email, $password);
             echo "<h3>✅ Registration successful!</h3>
-                  <a href='/user-managment-system/public/'>Back to Home</a>";
+                  <a href='/User-Management-System-MVC/public/'>Back to Home</a>";
         } catch (PDOException $e) {
             if ($e->getCode() == 23000) {
                 echo "<h3>⚠️ Email already exists!</h3>";
@@ -28,6 +28,12 @@ class UserController {
                 echo "<h3>❌ Database error: {$e->getMessage()}</h3>";
             }
         }
+    }
+
+    public function index() {
+        $user = new User();
+        $users = $user->all();
+        require __DIR__ . '/../views/read.php';
     }
 }
 ?>
