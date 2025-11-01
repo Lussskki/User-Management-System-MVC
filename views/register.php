@@ -21,6 +21,6 @@
   </form>
 
   <br>
-  <a href="/user-managment-system/public/">⬅️ Back</a>
+  <a href="/User-Management-System-MVC/public/">⬅️ Back</a>
 </body>
 </html>
