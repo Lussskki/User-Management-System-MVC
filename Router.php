@@ -11,8 +11,10 @@ class Router {
     }
 
     public function resolve() {
-        $path = str_replace('/user-managment-system/public', '', 
-        parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+        $path = rtrim(str_replace('/user-managment-system/public', '', 
+        parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)), '/');
+        if ($path === '') $path = '/';
+
         $method = $_SERVER['REQUEST_METHOD'];
 
         $callback = $this->routes[$method][$path] ?? null;
