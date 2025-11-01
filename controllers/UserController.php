@@ -29,5 +29,11 @@ class UserController {
             }
         }
     }
+        
+    public function index() {
+        $user = new User();
+        $users = $user->all();
+        require __DIR__ . '/../views/read.php';
+    }
 }
 ?>
