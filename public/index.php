@@ -15,6 +15,7 @@ $router->get('/register', function() {
     require __DIR__ . '/../views/register.php';
 });
 $router->post('/register', [$userController, 'registerSubmit']);
+$router->get('/users', [$userController, 'index']);
 
 $router->resolve();
 ?>
