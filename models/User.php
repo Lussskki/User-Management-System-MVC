@@ -15,5 +15,11 @@ class User {
         $stmt->execute([$name, $email, $hash]);
         return true;
     }
+     
+    public function all() {
+        $stmt = $this->pdo->query("SELECT id, name, email, created_at FROM users ORDER BY id DESC");
+        return $stmt->fetchAll();
+    }
+
 }
 ?>
