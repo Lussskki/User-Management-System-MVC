@@ -12,8 +12,8 @@
 </head>
 <body>
   <h2>📋 Registered Users</h2>
-  <a href="/user-managment-system/public/">⟵ Back</a> |
-  <a href="/user-managment-system/public/register">+ Add New</a>
+  <a href="/User-Management-System-MVC/public/">⟵ Back</a> |
+  <a href="/User-Management-System-MVC/public/register">+ Add New</a>
   <br><br>
 
   <?php if (empty($users)): ?>
@@ -33,9 +33,9 @@
           <td><?= htmlspecialchars($u['email']) ?></td>
           <td><?= htmlspecialchars($u['created_at']) ?></td>
           <td>
-            <a href="/user-managment-system/public/user/<?= urlencode($u['id']) ?>">View</a> |
-            <a href="/user-managment-system/public/update?id=<?= urlencode($u['id']) ?>">Edit</a> |
-            <a href="/user-managment-system/public/delete?id=<?= urlencode($u['id']) ?>" onclick="return confirm('Delete user?')">Delete</a>
+            <a href="/User-Management-System-MVC/public/one_user.php/<?= urlencode($u['id']) ?>">View</a> |
+            <a href="/User-Management-System-MVC/public/update?id=<?= urlencode($u['id']) ?>">Edit</a> |
+            <a href="/User-Management-System-MVC/public/delete?id=<?= urlencode($u['id']) ?>" onclick="return confirm('Delete user?')">Delete</a>
           </td>
         </tr>
       <?php endforeach; ?>
