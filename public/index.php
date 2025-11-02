@@ -16,6 +16,7 @@ $router->get('/register', function() {
 });
 $router->post('/register', [$userController, 'registerSubmit']);
 $router->get('/users', [$userController, 'index']);
+$router->get('/one/:id', [$userController, 'one']);
 
 $router->resolve();
 ?>
