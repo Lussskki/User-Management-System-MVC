@@ -36,5 +36,16 @@ class UserController {
         $users = $user->all();
         require __DIR__ . '/../views/read.php';
     }
+
+    public function one($id = null) {
+        if ($id) {
+            $user_model = new User();
+            $one = $user_model->findById($id);    
+
+            require __DIR__ . '/../views/one_user.php';
+        } else {
+            echo "No user ID provided.";
+        }
+    }
 }
 ?>
