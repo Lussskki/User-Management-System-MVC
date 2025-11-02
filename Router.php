@@ -11,7 +11,7 @@ class Router {
     }
 
     public function resolve() {
-        $path = rtrim(str_replace('/user-managment-system/public', '', 
+        $path = rtrim(str_replace('/User-Management-System-MVC/public', '', 
         parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)), '/');
         if ($path === '') $path = '/';
 

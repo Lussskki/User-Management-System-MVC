@@ -8,7 +8,7 @@ $userController = new UserController();
 
 $router->get('/', function() {
     return '<h1>Welcome to User Management System</h1>
-            <a href="/user-managment-system/public/register">Go to Register</a>';
+            <a href="/User-Management-System-MVC/public/register">Go to Register</a>';
 });
 
 $router->get('/register', function() {
