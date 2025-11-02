@@ -73,7 +73,7 @@
     <?php endif; ?>
 
     <div class="back">
-        <a href="/users">← Back</a>
+        <a href="/User-Management-System-MVC/public/users">← Back</a>
     </div>
 </div>
 
