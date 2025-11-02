@@ -3,6 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <title>Register</title>
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f8;
+            margin: 0;
+            padding: 40px;
+        }
+        .container {
+            background-color: white;
+            width: 400px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #222;
+        }
+        .field {
+            margin: 10px 0;
+        }
+        .label {
+            font-weight: bold;
+            display: inline-block;
+            width: 120px;
+        }
+        .value {
+            color: #555;
+        }
+        .back {
+            text-align: center;
+            margin-top: 20px;
+        }
+        table { border-collapse: collapse; width: 100%; max-width: 900px; }
+        th, td { padding: 8px 10px; border: 1px solid #ddd; text-align: left; }
+        th { background: #f4f4f4; }
+        a { text-decoration: none; color: blue; }
+    </style>
 </head>
 <body>
   <h2>Register New User</h2>
@@ -22,5 +61,6 @@
 
   <br>
   <a href="/User-Management-System-MVC/public/">⬅️ Back</a>
+  <a href="/User-Management-System-MVC/public/users"> Registered Users ➡️</a>
 </body>
 </html>
