@@ -37,13 +37,10 @@
             text-align: center;
             margin-top: 20px;
         }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+        table { border-collapse: collapse; width: 100%; max-width: 900px; }
+        th, td { padding: 8px 10px; border: 1px solid #ddd; text-align: left; }
+        th { background: #f4f4f4; }
+        a { text-decoration: none; color: blue; }
     </style>
 </head>
 <body>
@@ -73,7 +70,7 @@
     <?php endif; ?>
 
     <div class="back">
-        <a href="/User-Management-System-MVC/public/users">← Back</a>
+        <a href="/User-Management-System-MVC/public/users">⬅️ Back</a>
     </div>
 </div>
 
