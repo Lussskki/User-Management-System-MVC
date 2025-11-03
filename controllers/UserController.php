@@ -20,7 +20,7 @@ class UserController {
         try {
             $user->create($name, $email, $password);
             echo "<h3>✅ Registration successful!</h3>
-                  <a href='/User-Management-System-MVC/public/'>Back to Home</a>";
+                  <a href='/User-Management-System-MVC/public/'>⬅️ Back to Home</a>";
         } catch (PDOException $e) {
             if ($e->getCode() == 23000) {
                 echo "<h3>⚠️ Email already exists!</h3>";
@@ -47,5 +47,44 @@ class UserController {
             echo "No user ID provided.";
         }
     }
+
+    public function edit($id = null) {
+        if (!$id) {
+            echo "<h3>⚠️ No user ID provided.</h3>";
+            return;
+        }
+
+        $user_model = new User();
+        $user = $user_model->findById($id);
+
+        if ($user) {
+            require __DIR__ . '/../views/update_user.php';
+        } else {
+            echo "<h3>⚠️ User not found.</h3>";
+        }
+    }
+
+     public function update($id = null) {
+        if (!$id) {
+            echo "<h3>⚠️ No user ID provided.</h3>";
+            return;
+        }
+
+        $name = trim($_POST['name'] ?? '');
+        $email = trim($_POST['email'] ?? '');
+        $password = $_POST['password'] ?? '';
+
+        $user_model = new User();
+        $success = $user_model->update($id, $name, $email, $password);
+
+        if ($success) {
+            echo "<h3>✅ User updated successfully!</h3>
+                  <a href='/User-Management-System-MVC/public/users'>⬅️ Back to List</a>";
+        } else {
+            echo "<h3>❌ Update failed.</h3>";
+        }
+    }
+
+
 }
 ?>
