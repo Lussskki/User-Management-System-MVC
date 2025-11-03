@@ -67,7 +67,7 @@
           <td><?= htmlspecialchars($u['created_at']) ?></td>
           <td>
           <a href="/User-Management-System-MVC/public/one/<?= urlencode($u['id']) ?>">View</a> |
-          <a href="/User-Management-System-MVC/public/update/<?= urlencode($u['id']) ?>">Edit</a> |
+          <a href="/User-Management-System-MVC/public/edit/<?= urlencode($u['id']) ?>">Edit</a> |
           <a href="/User-Management-System-MVC/public/delete/<?= urlencode($u['id']) ?>" onclick="return confirm('Delete user?')">Delete</a>
 
           </td>
