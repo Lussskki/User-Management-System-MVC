@@ -28,6 +28,17 @@ class User {
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+    public function update($id, $name, $email, $password = null) {
+        if ($password) {
+            $hash = password_hash($password, PASSWORD_DEFAULT);
+            $stmt = $this->pdo->prepare("UPDATE users SET name = ?, email = ?, password_hash = ? WHERE id = ?");
+            return $stmt->execute([$name, $email, $hash, $id]);
+        } else {
+            $stmt = $this->pdo->prepare("UPDATE users SET name = ?, email = ? WHERE id = ?");
+            return $stmt->execute([$name, $email, $id]);
+        }
+    }
+
 
 }
 ?>
